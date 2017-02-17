@@ -1,94 +1,29 @@
 html
   head
     meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet")
     link(rel="stylesheet", href="./css/style.css")
     link(rel="stylesheet", href ="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
     link(rel="stylesheet", href="./css/default/default.css")
     link(rel="stylesheet" href="./css/nivo-slider.css" type="text/css")
+
     title
   body.main
     section
-      nav.menu
-        div.menu-logo
-          figure.menu-img-logo
-            img(src = "http://eseisnos.gov.co/images/logo_lateral.jpg", alt = "logo")
-        ul.menu-list
-          li.menu
-            i(class = "fa fa-bars menu-icon" aria-hidden="true")
-          li.menu-item inicio
-          li.menu-item inicio
-          li.menu-item inicio
-          li.menu-item inicio
-          li.menu-item inicio
+      include ./includes/menu/index.pug
     section
-      div.nivoSlider(id = "slider")
-        figure
-          img(src = "./images/slide1.jpg")
-        figure
-          img(src="./images/slide2.jpg", alt="")
-
+      include ./includes/slider/index.pug
     section(data-context ="about")
-      div.section-text.aboutUs
-        div.section-text-title Acerca de la clínica
-        div.section-text-title-line
-        p.section-text-text La Institución fue creada en 1.962, es decir hace aproximadamente 54 años, cuando funcionaba como dependencia del desaparecido Servicio de Salud del Huila; posteriormente fue adherido al Hospital Departamental "San Antonio" de la ciudad de Pitalito, siendo el Centro Asistencial adscrito al de Segundo Nivel y dependió económica y administrativamente del último hasta nueve de septiembre de 1.997. De ahí en adelante empieza a funcionar como Centro de Salud "San José", dejando atrás el manejo administrativo del Hospital Regional de Pitalito.
+      include ./includes/about/about.pug
 
-    section(data-context ="objetive")
-      div.section-text.objetive
-        div.section-text-title Población Objeto
-        div.section-text-title-line
-        p.section-text-text La ESE. Hospital San José, cumpliendo con las normas legales, ofrece sus servicios a la población de Isnense la cual tiene aproximadamente 27.141 habitantes, ofrecemos el siguiente portafolio de servicios:
-        ul.list-services
-          li.list-services-item
-            i(class="fa fa-check-square-o" aria-hidden="true")
-            span.list-services-text Consulta Externa.
-          li.list-services-item
-            i(class="fa fa-check-square-o" aria-hidden="true")
-            span.list-services-text Servicios de Protección Específica y Detección Temprana.
-          li.list-services-item
-            i(class="fa fa-check-square-o" aria-hidden="true")
-            span.list-services-text Atención Extramural.
-          li.list-services-item
-            i(class="fa fa-check-square-o" aria-hidden="true")
-            span.list-services-text Odontología.
-          li.list-services-item
-            i(class="fa fa-check-square-o" aria-hidden="true")
-            span.list-services-text Laboratorio Clínico.
-          li.list-services-item
-            i(class="fa fa-check-square-o" aria-hidden="true")
-            span.list-services-text Farmacia.
-          li.list-services-item
-            i(class="fa fa-check-square-o" aria-hidden="true")
-            span.list-services-text Urgencias y Hospitalización de baja complejidad.
+    section(data-context ="objectives")
+      include ./includes/objetivos/index.pug
 
     section(data-context = "lema")
-      div
-        figure.lema-img
-          img(src="./images/slide2.jpg", alt="")
-        div.text-title Nuestro Lema es sencillo
-        div.text-content "Por la Vida y la Salud trabajamos con pasión"
+      include ./includes/lema/lema.pug
 
-    section(data-context = "partners")
-      div.partners-list
-        figure.partners-list-item
-          a(href = "https://ministeriodelasalud.gov.co")
-            img(src="./images/minSalud.png", alt="ministerio de salud")
-        figure.partners-list-item
-          a(href = "https://ministeriodelasalud.gov.co")
-            img(src="./images/minSalud.png", alt="ministerio de salud")
-        figure.partners-list-item
-          a(href = "https://ministeriodelasalud.gov.co")
-            img(src="./images/minSalud.png", alt="ministerio de salud")
-        figure.partners-list-item
-          a(href = "https://ministeriodelasalud.gov.co")
-            img(src="./images/minSalud.png", alt="ministerio de salud")
-        figure.partners-list-item
-          a(href = "https://ministeriodelasalud.gov.co")
-            img(src="./images/minSalud.png", alt="ministerio de salud")
-        figure.partners-list-item
-          a(href = "https://ministeriodelasalud.gov.co")
-            img(src="./images/minSalud.png", alt="ministerio de salud")
-
+    section(data-context = "footer")
+      include ./includes/footer/index.pug
   script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript")
   script(src="./js/jquery.nivo.slider.pack.js" type="text/javascript")
   script(src = "./js/slider.js")
