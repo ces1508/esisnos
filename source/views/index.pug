@@ -1,11 +1,11 @@
 html
   head
     meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
-    link(href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet")
-    link(rel="stylesheet", href="./css/style.css")
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400" rel="stylesheet")
     link(rel="stylesheet", href ="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
-    link(rel="stylesheet", href="./css/default/default.css")
+    link(rel="stylesheet", href="./css/style.css")
     link(rel="stylesheet" href="./css/nivo-slider.css" type="text/css")
+    link(rel="stylesheet", href="./css/default/default.css")
 
     title
   body.main
@@ -16,7 +16,7 @@ html
     section(data-context ="about")
       include ./includes/about/about.pug
 
-    section(data-context ="objectives")
+    section(data-context ="objectives" id = "objetivos")
       include ./includes/objetivos/index.pug
 
     section(data-context = "lema")
